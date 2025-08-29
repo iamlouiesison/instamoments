@@ -34,6 +34,15 @@ export default async function DashboardPage() {
               <li>• Manage your subscription and billing</li>
             </ul>
           </div>
+          
+          <div className="mt-6 flex space-x-4">
+            <a
+              href="/dashboard/profile"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-amber-600 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
+            >
+              Manage Profile
+            </a>
+          </div>
         </div>
       </div>
     </div>

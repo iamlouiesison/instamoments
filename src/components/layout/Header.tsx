@@ -105,6 +105,11 @@ export default function Header() {
                         Dashboard
                       </Button>
                     </Link>
+                    <Link href="/dashboard/profile">
+                      <Button variant="ghost" size="sm">
+                        Profile
+                      </Button>
+                    </Link>
                     <Button 
                       variant="ghost" 
                       size="sm" 
@@ -173,6 +178,11 @@ export default function Header() {
                           <Button variant="outline" size="sm" className="w-full">
                             <User className="h-4 w-4 mr-2" />
                             Dashboard
+                          </Button>
+                        </Link>
+                        <Link href="/dashboard/profile" className="w-full">
+                          <Button variant="ghost" size="sm" className="w-full">
+                            Profile
                           </Button>
                         </Link>
                         <Button 

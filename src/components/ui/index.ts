@@ -27,3 +27,4 @@ export {
 } from './loading';
 export { ErrorBoundary, useErrorHandler } from './error-boundary';
 export { PasswordStrength } from './password-strength';
+export { Breadcrumb } from './breadcrumb';
