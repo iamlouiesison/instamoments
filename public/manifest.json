@@ -1,0 +1,26 @@
+{
+  "name": "InstaMoments - Event Memory Sharing",
+  "short_name": "InstaMoments",
+  "description": "Instant collaborative event photo galleries",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "categories": ["photography", "social", "events"],
+  "lang": "en-PH",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
