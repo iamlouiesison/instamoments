@@ -56,8 +56,8 @@ export const storage = {
           data: null, 
           error: { 
             message: error.message, 
-            code: error.code,
-            details: error.details 
+            
+             
           } 
         };
       }
@@ -99,8 +99,8 @@ export const storage = {
           data: null, 
           error: { 
             message: error.message, 
-            code: error.code,
-            details: error.details 
+            
+             
           } 
         };
       }
@@ -131,8 +131,8 @@ export const storage = {
           data: null, 
           error: { 
             message: error.message, 
-            code: error.code,
-            details: error.details 
+            
+             
           } 
         };
       }
@@ -172,8 +172,8 @@ export const storage = {
           data: null, 
           error: { 
             message: error.message, 
-            code: error.code,
-            details: error.details 
+            
+             
           } 
         };
       }
@@ -455,8 +455,8 @@ export const serverStorage = {
           data: null, 
           error: { 
             message: error.message, 
-            code: error.code,
-            details: error.details 
+            
+             
           } 
         };
       }

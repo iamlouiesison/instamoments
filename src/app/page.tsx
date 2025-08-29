@@ -9,7 +9,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="bg-background">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold text-foreground mb-6">
@@ -108,6 +108,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

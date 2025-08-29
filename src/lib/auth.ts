@@ -1,6 +1,7 @@
 import { supabase } from './supabase/client';
 import { createClient } from './supabase/server';
 import { Profile } from '@/types';
+import type { User, Session } from '@supabase/supabase-js';
 
 export interface AuthError {
   message: string;
@@ -15,7 +16,7 @@ export interface AuthResult<T> {
 // Client-side authentication functions
 export const auth = {
   // Sign up with email and password
-  async signUp(email: string, password: string, profile?: Partial<Profile>): Promise<AuthResult<{ user: any; profile: Profile | null }>> {
+  async signUp(email: string, password: string, profile?: Partial<Profile>): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
     try {
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -43,7 +44,7 @@ export const auth = {
 
       return { 
         data: { 
-          user: data.user, 
+          user: data.user!, 
           profile: null 
         }, 
         error: null 
@@ -59,7 +60,7 @@ export const auth = {
   },
 
   // Sign in with email and password
-  async signIn(email: string, password: string): Promise<AuthResult<{ user: any; profile: Profile | null }>> {
+  async signIn(email: string, password: string): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
@@ -111,7 +112,7 @@ export const auth = {
   },
 
   // Get current user
-  async getCurrentUser(): Promise<AuthResult<{ user: any; profile: Profile | null }>> {
+  async getCurrentUser(): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
     try {
       const { data: { user }, error } = await supabase.auth.getUser();
       
@@ -272,7 +273,7 @@ export const auth = {
 // Server-side authentication functions
 export const serverAuth = {
   // Get current user on server side
-  async getCurrentUser(): Promise<AuthResult<{ user: any; profile: Profile | null }>> {
+  async getCurrentUser(): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
     try {
       const supabase = await createClient();
       const { data: { user }, error } = await supabase.auth.getUser();
@@ -328,7 +329,7 @@ export const serverAuth = {
 };
 
 // Auth state change listener
-export const onAuthStateChange = (callback: (event: string, session: any) => void) => {
+export const onAuthStateChange = (callback: (event: string, session: Session | null) => void) => {
   return supabase.auth.onAuthStateChange(callback);
 };
 
