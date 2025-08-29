@@ -15,7 +15,7 @@ export function useAuth() {
   useEffect(() => {
     // Get initial session
     const getInitialSession = async () => {
-      const { session, error } = await getSession();
+      const { session } = await getSession();
       
       if (session?.user) {
         const profile = await auth.getProfile(session.user.id);

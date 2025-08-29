@@ -1,33 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 199 89% 48%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 199 89% 48%;
+    /* Primary Brand Colors */
+    --primary: 217 91% 60%; /* Blue #3B82F6 - trust and reliability */
+    --primary-foreground: 0 0% 98%; /* Near white for contrast */
+
+    /* Secondary Colors */
+    --secondary: 43 96% 56%; /* Warm Amber #F59E0B - celebration and joy */
+    --secondary-foreground: 25 95% 6%; /* Dark brown for contrast */
+
+    /* Background Colors */
+    --background: 200 50% 95%; /* Light blue-teal #E8F4F8 - calm, welcoming */
+    --foreground: 215 25% 27%; /* Dark gray #1F2937 - primary text */
+    --card: 0 0% 100%; /* Pure white for cards */
+    --card-foreground: 215 25% 27%; /* Dark gray for card text */
+
+    /* Neutral Colors */
+    --muted: 210 40% 98%; /* Very light gray for subtle backgrounds */
+    --muted-foreground: 215 16% 47%; /* Medium gray #6B7280 for secondary text */
+
+    /* UI Colors */
+    --border: 214 32% 91%; /* Light gray borders */
+    --input: 214 32% 91%; /* Input field backgrounds */
+    --ring: 217 91% 60%; /* Focus ring color (same as primary) */
     --radius: 0.5rem;
-    --success: 142 76% 36%;
-    --success-foreground: 210 40% 98%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 210 40% 98%;
+
+    /* Status Colors */
+    --success: 142 76% 36%; /* Green #10B981 for success states */
+    --success-foreground: 210 40% 98%; /* Light text on success */
+    --warning: 43 96% 56%; /* Amber #F59E0B for warnings */
+    --warning-foreground: 25 95% 6%; /* Dark text on warning */
+    --destructive: 0 84% 60%; /* Red for destructive actions */
+    --destructive-foreground: 210 40% 98%; /* Light text on destructive */
+
+    /* Event-Specific Colors */
+    --celebration: 43 96% 56%; /* Warm amber for celebration moments */
+    --photo-accent: 142 76% 36%; /* Green for photo-related actions */
+    --video-accent: 217 91% 60%; /* Blue for video-related actions */
+    --live-indicator: 0 84% 60%; /* Red for live/real-time indicators */
+
+    /* Additional UI Colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 215 25% 27%;
   }
 
   .dark {
@@ -37,9 +58,9 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 199 89% 48%;
+    --primary: 217 91% 60%;
     --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 43 96% 56%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -49,17 +70,64 @@
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 199 89% 48%;
+    --ring: 217 91% 60%;
     --success: 142 76% 36%;
     --success-foreground: 222.2 84% 4.9%;
-    --warning: 38 92% 50%;
+    --warning: 43 96% 56%;
     --warning-foreground: 222.2 84% 4.9%;
   }
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Heading Styles */
+  .h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+  .h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+  .h3 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+  .h4 {
+    @apply text-xl font-semibold tracking-tight;
+  }
+  .h5 {
+    @apply text-lg font-semibold tracking-tight;
+  }
+  .h6 {
+    @apply text-base font-semibold tracking-tight;
+  }
+
+  /* Body Text Hierarchy */
+  .text-lead {
+    @apply text-muted-foreground text-xl;
+  }
+  .text-large {
+    @apply text-lg;
+  }
+  .text-default {
+    @apply text-base;
+  }
+  .text-small {
+    @apply text-sm;
+  }
+
+  /* Philippine Payment Method Colors */
+  .gcash-blue {
+    background: #007dff;
+  }
+  .paymaya-green {
+    background: #00b14f;
+  }
+  .paymongo-purple {
+    background: #6366f1;
   }
 }
 

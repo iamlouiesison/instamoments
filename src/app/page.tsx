@@ -27,6 +27,9 @@ export default function Home() {
             <Button variant="outline" size="lg">
               Learn More
             </Button>
+            <Button variant="secondary" size="lg" asChild>
+              <a href="/components">View Components</a>
+            </Button>
           </div>
         </div>
 

@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const supabase = await createClient();
     
     // Test database connection by querying a simple table
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('profiles')
       .select('count')
       .limit(1);
@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Test auth connection
-    const { data: authData, error: authError } = await supabase.auth.getSession();
+    const { error: authError } = await supabase.auth.getSession();
     
     if (authError) {
       return NextResponse.json({
@@ -71,9 +71,9 @@ export async function POST(request: NextRequest) {
     const supabase = await createClient();
     const body = await request.json();
     
-    // Test creating a temporary record (for testing purposes)
-    if (body.action === 'test-insert') {
-      const { data, error } = await supabase
+          // Test creating a temporary record (for testing purposes)
+      if (body.action === 'test-insert') {
+        const { error } = await supabase
         .from('profiles')
         .insert([
           {
