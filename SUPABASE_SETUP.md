@@ -184,16 +184,19 @@ CREATE TABLE event_contributors (
 ### Option B: Using Supabase CLI (Advanced)
 
 1. Install Supabase CLI:
+
    ```bash
    npm install -g supabase
    ```
 
 2. Initialize Supabase in your project:
+
    ```bash
    supabase init
    ```
 
 3. Link to your remote project:
+
    ```bash
    supabase link --project-ref your-project-ref
    ```
@@ -247,8 +250,8 @@ CREATE POLICY "Anyone can view approved photos" ON photos
 CREATE POLICY "Event hosts can view all photos" ON photos
   FOR SELECT USING (
     EXISTS (
-      SELECT 1 FROM events 
-      WHERE events.id = photos.event_id 
+      SELECT 1 FROM events
+      WHERE events.id = photos.event_id
       AND events.host_user_id = auth.uid()
     )
   );
@@ -263,8 +266,8 @@ CREATE POLICY "Anyone can view approved videos" ON videos
 CREATE POLICY "Event hosts can view all videos" ON videos
   FOR SELECT USING (
     EXISTS (
-      SELECT 1 FROM events 
-      WHERE events.id = videos.event_id 
+      SELECT 1 FROM events
+      WHERE events.id = videos.event_id
       AND events.host_user_id = auth.uid()
     )
   );
@@ -277,9 +280,8 @@ CREATE POLICY "Contributors can insert videos" ON videos
 
 1. Go to **Storage** in your Supabase dashboard
 2. Create the following buckets:
-
    - **event-photos**: For storing event photos
-   - **event-videos**: For storing event videos  
+   - **event-videos**: For storing event videos
    - **thumbnails**: For storing photo/video thumbnails
    - **user-avatars**: For storing user profile pictures
 
@@ -289,7 +291,7 @@ CREATE POLICY "Contributors can insert videos" ON videos
 -- Allow authenticated users to upload photos
 CREATE POLICY "Users can upload photos" ON storage.objects
   FOR INSERT WITH CHECK (
-    bucket_id = 'event-photos' 
+    bucket_id = 'event-photos'
     AND auth.role() = 'authenticated'
   );
 
@@ -313,6 +315,7 @@ CREATE POLICY "Public can view photos" ON storage.objects
 ## Step 8: Test the Connection
 
 1. Start your development server:
+
    ```bash
    npm run dev
    ```

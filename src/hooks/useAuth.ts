@@ -9,14 +9,17 @@ export interface AuthUser {
 }
 
 export function useAuth() {
-  const [authUser, setAuthUser] = useState<AuthUser>({ user: null, profile: null });
+  const [authUser, setAuthUser] = useState<AuthUser>({
+    user: null,
+    profile: null,
+  });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Get initial session
     const getInitialSession = async () => {
       const { session } = await getSession();
-      
+
       if (session?.user) {
         const profile = await auth.getProfile(session.user.id);
         setAuthUser({
@@ -24,14 +27,16 @@ export function useAuth() {
           profile: profile.data,
         });
       }
-      
+
       setLoading(false);
     };
 
     getInitialSession();
 
     // Listen for auth changes
-    const { data: { subscription } } = onAuthStateChange(async (event, session) => {
+    const {
+      data: { subscription },
+    } = onAuthStateChange(async (event, session) => {
       if (session?.user) {
         const profile = await auth.getProfile(session.user.id);
         setAuthUser({
@@ -58,7 +63,11 @@ export function useAuth() {
     return { error: result.error };
   };
 
-  const signUp = async (email: string, password: string, profile?: Partial<Profile>) => {
+  const signUp = async (
+    email: string,
+    password: string,
+    profile?: Partial<Profile>
+  ) => {
     const result = await auth.signUp(email, password, profile);
     if (result.data) {
       setAuthUser({
@@ -85,7 +94,7 @@ export function useAuth() {
     if (!authUser.user) {
       return { error: { message: 'No user logged in' } };
     }
-    
+
     const result = await auth.updateProfile(authUser.user.id, updates);
     if (result.data) {
       setAuthUser(prev => ({
@@ -100,7 +109,7 @@ export function useAuth() {
     if (!authUser.user) {
       return { error: { message: 'No user logged in' } };
     }
-    
+
     const result = await auth.getProfile(authUser.user.id);
     if (result.data) {
       setAuthUser(prev => ({

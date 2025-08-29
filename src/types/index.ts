@@ -1,3 +1,6 @@
+// Export database types
+export * from './database.types';
+
 // Event types
 export type EventType =
   | 'wedding'

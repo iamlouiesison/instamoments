@@ -23,7 +23,7 @@ A modern photo-sharing platform for events and moments in the Philippines, built
 
 ## 📋 Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 - Git
 - Supabase account
@@ -32,22 +32,26 @@ A modern photo-sharing platform for events and moments in the Philippines, built
 ## 🛠️ Installation
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/instamoments.git
 cd instamoments
 ```
 
 ### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Set up environment variables
+
 ```bash
 cp .env.example .env.local
 ```
 
 Edit `.env.local` with your Supabase credentials:
+
 ```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
@@ -57,13 +61,16 @@ NEXT_PUBLIC_APP_NAME=InstaMoments
 ```
 
 ### 4. Set up Supabase
+
 Follow the [Supabase Setup Guide](./SUPABASE_SETUP.md) to:
+
 - Create your Supabase project
 - Set up the database schema
 - Configure authentication
 - Set up storage buckets
 
 ### 5. Run the development server
+
 ```bash
 npm run dev
 ```
@@ -111,13 +118,13 @@ instamoments/
 
 ## 🔐 Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Your Supabase project URL | ✅ |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Your Supabase anon key | ✅ |
-| `SUPABASE_SERVICE_ROLE_KEY` | Your Supabase service role key | ✅ |
-| `NEXT_PUBLIC_APP_URL` | Your app's URL | ✅ |
-| `NEXT_PUBLIC_APP_NAME` | Your app's name | ✅ |
+| Variable                        | Description                    | Required |
+| ------------------------------- | ------------------------------ | -------- |
+| `NEXT_PUBLIC_SUPABASE_URL`      | Your Supabase project URL      | ✅       |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Your Supabase anon key         | ✅       |
+| `SUPABASE_SERVICE_ROLE_KEY`     | Your Supabase service role key | ✅       |
+| `NEXT_PUBLIC_APP_URL`           | Your app's URL                 | ✅       |
+| `NEXT_PUBLIC_APP_NAME`          | Your app's name                | ✅       |
 
 ## 🚀 Deployment
 
@@ -140,6 +147,7 @@ npm run start
 ### Code Style
 
 This project uses:
+
 - **ESLint** for code linting
 - **Prettier** for code formatting
 - **TypeScript** for type safety

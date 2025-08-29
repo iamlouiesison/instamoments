@@ -15,16 +15,22 @@ export function Loading({ size = 'md', className, text }: LoadingProps) {
   };
 
   return (
-    <div className={cn('flex flex-col items-center justify-center space-y-2', className)}>
-      <Loader2 className={cn('animate-spin text-primary', sizeClasses[size])} />
-      {text && (
-        <p className="text-sm text-muted-foreground">{text}</p>
+    <div
+      className={cn(
+        'flex flex-col items-center justify-center space-y-2',
+        className
       )}
+    >
+      <Loader2 className={cn('animate-spin text-primary', sizeClasses[size])} />
+      {text && <p className="text-sm text-muted-foreground">{text}</p>}
     </div>
   );
 }
 
-export function LoadingSpinner({ size = 'md', className }: Omit<LoadingProps, 'text'>) {
+export function LoadingSpinner({
+  size = 'md',
+  className,
+}: Omit<LoadingProps, 'text'>) {
   const sizeClasses = {
     sm: 'h-4 w-4',
     md: 'h-6 w-6',
@@ -32,7 +38,9 @@ export function LoadingSpinner({ size = 'md', className }: Omit<LoadingProps, 't
   };
 
   return (
-    <Loader2 className={cn('animate-spin text-primary', sizeClasses[size], className)} />
+    <Loader2
+      className={cn('animate-spin text-primary', sizeClasses[size], className)}
+    />
   );
 }
 

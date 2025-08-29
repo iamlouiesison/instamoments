@@ -52,13 +52,11 @@ export const storage = {
         });
 
       if (error) {
-        return { 
-          data: null, 
-          error: { 
-            message: error.message, 
-            
-             
-          } 
+        return {
+          data: null,
+          error: {
+            message: error.message,
+          },
         };
       }
 
@@ -67,19 +65,22 @@ export const storage = {
         .from(bucket)
         .getPublicUrl(path);
 
-      return { 
-        data: { 
-          path: data.path, 
-          url: urlData.publicUrl 
-        }, 
-        error: null 
+      return {
+        data: {
+          path: data.path,
+          url: urlData.publicUrl,
+        },
+        error: null,
       };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -95,65 +96,60 @@ export const storage = {
         .download(path);
 
       if (error) {
-        return { 
-          data: null, 
-          error: { 
-            message: error.message, 
-            
-             
-          } 
+        return {
+          data: null,
+          error: {
+            message: error.message,
+          },
         };
       }
 
       return { data, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
 
   // Delete file from storage
-  async deleteFile(
-    bucket: string,
-    path: string
-  ): Promise<StorageResult<void>> {
+  async deleteFile(bucket: string, path: string): Promise<StorageResult<void>> {
     try {
-      const { error } = await supabase.storage
-        .from(bucket)
-        .remove([path]);
+      const { error } = await supabase.storage.from(bucket).remove([path]);
 
       if (error) {
-        return { 
-          data: null, 
-          error: { 
-            message: error.message, 
-            
-             
-          } 
+        return {
+          data: null,
+          error: {
+            message: error.message,
+          },
         };
       }
 
       return { data: undefined, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
 
   // Get public URL for file
   getPublicUrl(bucket: string, path: string): string {
-    const { data } = supabase.storage
-      .from(bucket)
-      .getPublicUrl(path);
-    
+    const { data } = supabase.storage.from(bucket).getPublicUrl(path);
+
     return data.publicUrl;
   },
 
@@ -161,37 +157,40 @@ export const storage = {
   async listFiles(
     bucket: string,
     folder?: string
-  ): Promise<StorageResult<{ name: string; size: number; updated_at: string }[]>> {
+  ): Promise<
+    StorageResult<{ name: string; size: number; updated_at: string }[]>
+  > {
     try {
       const { data, error } = await supabase.storage
         .from(bucket)
         .list(folder || '');
 
       if (error) {
-        return { 
-          data: null, 
-          error: { 
-            message: error.message, 
-            
-             
-          } 
+        return {
+          data: null,
+          error: {
+            message: error.message,
+          },
         };
       }
 
-      return { 
+      return {
         data: data.map(item => ({
           name: item.name,
           size: item.metadata?.size || 0,
           updated_at: item.updated_at || '',
-        })), 
-        error: null 
+        })),
+        error: null,
       };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -204,18 +203,20 @@ export const photoStorage = {
     eventId: string,
     file: File,
     contributorId: string
-  ): Promise<StorageResult<{ 
-    originalPath: string; 
-    thumbnailPath: string; 
-    originalUrl: string; 
-    thumbnailUrl: string; 
-  }>> {
+  ): Promise<
+    StorageResult<{
+      originalPath: string;
+      thumbnailPath: string;
+      originalUrl: string;
+      thumbnailUrl: string;
+    }>
+  > {
     try {
       // Generate unique filename
       const timestamp = Date.now();
       const fileExtension = file.name.split('.').pop();
       const filename = `${timestamp}_${contributorId}.${fileExtension}`;
-      
+
       // Upload original photo
       const originalPath = `${eventId}/original/${filename}`;
       const originalResult = await storage.uploadFile(
@@ -231,7 +232,10 @@ export const photoStorage = {
       // Generate thumbnail (you might want to do this on the server side)
       // For now, we'll just return the original path
       const thumbnailPath = `${eventId}/thumbnails/${filename}`;
-      const thumbnailUrl = storage.getPublicUrl(STORAGE_BUCKETS.THUMBNAILS, thumbnailPath);
+      const thumbnailUrl = storage.getPublicUrl(
+        STORAGE_BUCKETS.THUMBNAILS,
+        thumbnailPath
+      );
 
       return {
         data: {
@@ -243,11 +247,14 @@ export const photoStorage = {
         error: null,
       };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -262,24 +269,33 @@ export const photoStorage = {
       const thumbnailPath = `${eventId}/thumbnails/${filename}`;
 
       // Delete original photo
-      const originalResult = await storage.deleteFile(STORAGE_BUCKETS.PHOTOS, originalPath);
+      const originalResult = await storage.deleteFile(
+        STORAGE_BUCKETS.PHOTOS,
+        originalPath
+      );
       if (originalResult.error) {
         console.warn('Failed to delete original photo:', originalResult.error);
       }
 
       // Delete thumbnail
-      const thumbnailResult = await storage.deleteFile(STORAGE_BUCKETS.THUMBNAILS, thumbnailPath);
+      const thumbnailResult = await storage.deleteFile(
+        STORAGE_BUCKETS.THUMBNAILS,
+        thumbnailPath
+      );
       if (thumbnailResult.error) {
         console.warn('Failed to delete thumbnail:', thumbnailResult.error);
       }
 
       return { data: undefined, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -293,18 +309,20 @@ export const videoStorage = {
     file: File,
     contributorId: string,
     thumbnailBlob?: Blob
-  ): Promise<StorageResult<{ 
-    originalPath: string; 
-    thumbnailPath: string; 
-    originalUrl: string; 
-    thumbnailUrl: string; 
-  }>> {
+  ): Promise<
+    StorageResult<{
+      originalPath: string;
+      thumbnailPath: string;
+      originalUrl: string;
+      thumbnailUrl: string;
+    }>
+  > {
     try {
       // Generate unique filename
       const timestamp = Date.now();
       const fileExtension = file.name.split('.').pop();
       const filename = `${timestamp}_${contributorId}.${fileExtension}`;
-      
+
       // Upload original video
       const originalPath = `${eventId}/original/${filename}`;
       const originalResult = await storage.uploadFile(
@@ -320,11 +338,11 @@ export const videoStorage = {
       // Upload thumbnail if provided
       let thumbnailPath = '';
       let thumbnailUrl = '';
-      
+
       if (thumbnailBlob) {
         const thumbnailFilename = `${timestamp}_${contributorId}_thumb.jpg`;
         thumbnailPath = `${eventId}/thumbnails/${thumbnailFilename}`;
-        
+
         const thumbnailResult = await storage.uploadFile(
           STORAGE_BUCKETS.THUMBNAILS,
           thumbnailPath,
@@ -349,11 +367,14 @@ export const videoStorage = {
         error: null,
       };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -368,24 +389,33 @@ export const videoStorage = {
       const thumbnailPath = `${eventId}/thumbnails/${filename}`;
 
       // Delete original video
-      const originalResult = await storage.deleteFile(STORAGE_BUCKETS.VIDEOS, originalPath);
+      const originalResult = await storage.deleteFile(
+        STORAGE_BUCKETS.VIDEOS,
+        originalPath
+      );
       if (originalResult.error) {
         console.warn('Failed to delete original video:', originalResult.error);
       }
 
       // Delete thumbnail
-      const thumbnailResult = await storage.deleteFile(STORAGE_BUCKETS.THUMBNAILS, thumbnailPath);
+      const thumbnailResult = await storage.deleteFile(
+        STORAGE_BUCKETS.THUMBNAILS,
+        thumbnailPath
+      );
       if (thumbnailResult.error) {
         console.warn('Failed to delete thumbnail:', thumbnailResult.error);
       }
 
       return { data: undefined, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -412,11 +442,14 @@ export const avatarStorage = {
 
       return result;
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -427,11 +460,14 @@ export const avatarStorage = {
       const path = `avatars/${userId}.jpg`; // Assuming JPG format
       return await storage.deleteFile(STORAGE_BUCKETS.AVATARS, path);
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -451,13 +487,11 @@ export const serverStorage = {
         .list(path.split('/').slice(0, -1).join('/'));
 
       if (error) {
-        return { 
-          data: null, 
-          error: { 
-            message: error.message, 
-            
-             
-          } 
+        return {
+          data: null,
+          error: {
+            message: error.message,
+          },
         };
       }
 
@@ -465,9 +499,9 @@ export const serverStorage = {
       const file = data.find(item => item.name === filename);
 
       if (!file) {
-        return { 
-          data: null, 
-          error: { message: 'File not found' } 
+        return {
+          data: null,
+          error: { message: 'File not found' },
         };
       }
 
@@ -479,11 +513,14 @@ export const serverStorage = {
         error: null,
       };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },

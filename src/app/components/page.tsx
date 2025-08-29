@@ -1,10 +1,25 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Camera, Calendar, MapPin } from "lucide-react"
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Camera, Calendar, MapPin } from 'lucide-react';
 
 export default function ComponentsPage() {
   return (
@@ -14,7 +29,8 @@ export default function ComponentsPage() {
         <div className="text-center space-y-4">
           <h1 className="h1 text-primary">InstaMoments Component Library</h1>
           <p className="text-lead text-muted-foreground">
-            A showcase of our custom shadcn/ui components with InstaMoments branding
+            A showcase of our custom shadcn/ui components with InstaMoments
+            branding
           </p>
         </div>
 
@@ -36,7 +52,9 @@ export default function ComponentsPage() {
             <Button size="sm">Small</Button>
             <Button size="default">Default</Button>
             <Button size="lg">Large</Button>
-            <Button size="icon"><Camera className="h-4 w-4" /></Button>
+            <Button size="icon">
+              <Camera className="h-4 w-4" />
+            </Button>
           </div>
         </section>
 
@@ -58,7 +76,9 @@ export default function ComponentsPage() {
             <Card>
               <CardHeader>
                 <CardTitle>Event Card</CardTitle>
-                <CardDescription>Beautiful event showcase with our design system</CardDescription>
+                <CardDescription>
+                  Beautiful event showcase with our design system
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -71,7 +91,9 @@ export default function ComponentsPage() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button variant="outline" size="sm">Details</Button>
+                <Button variant="outline" size="sm">
+                  Details
+                </Button>
                 <Button size="sm">Join Event</Button>
               </CardFooter>
             </Card>
@@ -79,7 +101,9 @@ export default function ComponentsPage() {
             <Card>
               <CardHeader>
                 <CardTitle>Photo Gallery</CardTitle>
-                <CardDescription>Capture and share your moments</CardDescription>
+                <CardDescription>
+                  Capture and share your moments
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="aspect-video bg-muted rounded-md flex items-center justify-center">
@@ -87,8 +111,12 @@ export default function ComponentsPage() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button variant="photo" size="sm">Take Photo</Button>
-                <Button variant="outline" size="sm">View Gallery</Button>
+                <Button variant="photo" size="sm">
+                  Take Photo
+                </Button>
+                <Button variant="outline" size="sm">
+                  View Gallery
+                </Button>
               </CardFooter>
             </Card>
 
@@ -100,11 +128,15 @@ export default function ComponentsPage() {
               <CardContent>
                 <div className="flex items-center space-x-2">
                   <Badge variant="live">LIVE</Badge>
-                  <span className="text-sm text-muted-foreground">2.5k watching</span>
+                  <span className="text-sm text-muted-foreground">
+                    2.5k watching
+                  </span>
                 </div>
               </CardContent>
               <CardFooter>
-                <Button variant="video" className="w-full">Join Stream</Button>
+                <Button variant="video" className="w-full">
+                  Join Stream
+                </Button>
               </CardFooter>
             </Card>
           </div>
@@ -156,7 +188,8 @@ export default function ComponentsPage() {
               <DialogHeader>
                 <DialogTitle>Event Details</DialogTitle>
                 <DialogDescription>
-                  Make changes to your event here. Click save when you&apos;re done.
+                  Make changes to your event here. Click save when you&apos;re
+                  done.
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 py-4">
@@ -164,13 +197,21 @@ export default function ComponentsPage() {
                   <label htmlFor="name" className="text-right">
                     Name
                   </label>
-                  <Input id="name" value="Christmas Party 2024" className="col-span-3" />
+                  <Input
+                    id="name"
+                    value="Christmas Party 2024"
+                    className="col-span-3"
+                  />
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4">
                   <label htmlFor="date" className="text-right">
                     Date
                   </label>
-                  <Input id="date" value="December 25, 2024" className="col-span-3" />
+                  <Input
+                    id="date"
+                    value="December 25, 2024"
+                    className="col-span-3"
+                  />
                 </div>
               </div>
               <DialogFooter>
@@ -219,7 +260,9 @@ export default function ComponentsPage() {
             <h6 className="h6">Heading 6 - Small Headers</h6>
             <p className="text-lead">Lead text for hero descriptions</p>
             <p className="text-large">Large text for important content</p>
-            <p className="text-default">Default body text for standard content</p>
+            <p className="text-default">
+              Default body text for standard content
+            </p>
             <p className="text-small">Small text for captions and metadata</p>
           </div>
         </section>
@@ -228,12 +271,18 @@ export default function ComponentsPage() {
         <section className="space-y-6">
           <h2 className="h2">Philippine Payment Methods</h2>
           <div className="flex space-x-4">
-            <div className="gcash-blue text-white px-4 py-2 rounded-lg font-medium">GCash</div>
-            <div className="paymaya-green text-white px-4 py-2 rounded-lg font-medium">PayMaya</div>
-            <div className="paymongo-purple text-white px-4 py-2 rounded-lg font-medium">PayMongo</div>
+            <div className="gcash-blue text-white px-4 py-2 rounded-lg font-medium">
+              GCash
+            </div>
+            <div className="paymaya-green text-white px-4 py-2 rounded-lg font-medium">
+              PayMaya
+            </div>
+            <div className="paymongo-purple text-white px-4 py-2 rounded-lg font-medium">
+              PayMongo
+            </div>
           </div>
         </section>
       </div>
     </div>
-  )
+  );
 }

@@ -32,7 +32,9 @@ export async function middleware(request: NextRequest) {
   );
 
   // Refresh session if expired
-  const { data: { session } } = await supabase.auth.getSession();
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
 
   // Define protected routes
   const protectedRoutes = [
@@ -44,23 +46,17 @@ export async function middleware(request: NextRequest) {
   ];
 
   // Define auth routes (login, signup, etc.)
-  const authRoutes = [
-    '/auth/login',
-    '/auth/signup',
-    '/auth/reset-password',
-  ];
+  const authRoutes = ['/auth/login', '/auth/signup', '/auth/reset-password'];
 
   const { pathname } = request.nextUrl;
 
   // Check if user is trying to access protected routes
-  const isProtectedRoute = protectedRoutes.some(route => 
+  const isProtectedRoute = protectedRoutes.some(route =>
     pathname.startsWith(route)
   );
 
   // Check if user is trying to access auth routes
-  const isAuthRoute = authRoutes.some(route => 
-    pathname.startsWith(route)
-  );
+  const isAuthRoute = authRoutes.some(route => pathname.startsWith(route));
 
   // If accessing protected route without session, redirect to login
   if (isProtectedRoute && !session) {

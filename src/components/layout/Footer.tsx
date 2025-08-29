@@ -50,14 +50,20 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">IM</span>
+                <span className="text-primary-foreground font-bold text-lg">
+                  IM
+                </span>
               </div>
-              <span className="text-xl font-bold text-foreground">InstaMoments</span>
+              <span className="text-xl font-bold text-foreground">
+                InstaMoments
+              </span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Capture every precious moment together. Create instant collaborative photo and video galleries for events in the Philippines.
+              Capture every precious moment together. Create instant
+              collaborative photo and video galleries for events in the
+              Philippines.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
@@ -90,11 +96,13 @@ export default function Footer() {
           </div>
 
           {/* Footer Links */}
-          {footerSections.map((section) => (
+          {footerSections.map(section => (
             <div key={section.title}>
-              <h3 className="font-semibold text-foreground mb-4">{section.title}</h3>
+              <h3 className="font-semibold text-foreground mb-4">
+                {section.title}
+              </h3>
               <ul className="space-y-2">
-                {section.links.map((link) => (
+                {section.links.map(link => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -112,18 +120,32 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-muted-foreground mb-4 md:mb-0">
-            <p>&copy; {new Date().getFullYear()} InstaMoments. All rights reserved.</p>
-            <p className="mt-1">Philippine business registration: DTI-123456789</p>
+            <p>
+              &copy; {new Date().getFullYear()} InstaMoments. All rights
+              reserved.
+            </p>
+            <p className="mt-1">
+              Philippine business registration: DTI-123456789
+            </p>
           </div>
-          
+
           <div className="flex space-x-6 text-sm text-muted-foreground">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-foreground transition-colors"
+            >
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-foreground transition-colors">
+            <Link
+              href="/terms"
+              className="hover:text-foreground transition-colors"
+            >
               Terms
             </Link>
-            <Link href="/cookies" className="hover:text-foreground transition-colors">
+            <Link
+              href="/cookies"
+              className="hover:text-foreground transition-colors"
+            >
               Cookies
             </Link>
           </div>

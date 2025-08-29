@@ -10,15 +10,14 @@ export default function NotFound() {
           <div className="mx-auto w-24 h-24 bg-muted rounded-full flex items-center justify-center mb-6">
             <Search className="w-12 h-12 text-muted-foreground" />
           </div>
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            404
-          </h1>
+          <h1 className="text-4xl font-bold text-foreground mb-4">404</h1>
           <h2 className="text-2xl font-semibold text-foreground mb-2">
             Page Not Found
           </h2>
           <p className="text-muted-foreground mb-8">
-            The page you&apos;re looking for doesn&apos;t exist or has been moved. 
-            Let&apos;s get you back on track to capturing beautiful moments.
+            The page you&apos;re looking for doesn&apos;t exist or has been
+            moved. Let&apos;s get you back on track to capturing beautiful
+            moments.
           </p>
         </div>
 
@@ -29,9 +28,12 @@ export default function NotFound() {
               Go to Homepage
             </Link>
           </Button>
-          
+
           <Button variant="outline" asChild className="w-full">
-            <Link href="/how-it-works" className="flex items-center justify-center gap-2">
+            <Link
+              href="/how-it-works"
+              className="flex items-center justify-center gap-2"
+            >
               <ArrowLeft className="w-4 h-4" />
               Learn How It Works
             </Link>
@@ -41,20 +43,20 @@ export default function NotFound() {
         <div className="mt-8 text-sm text-muted-foreground">
           <p>Looking for something specific? Try these popular pages:</p>
           <div className="flex flex-wrap justify-center gap-2 mt-3">
-            <Link 
-              href="/pricing" 
+            <Link
+              href="/pricing"
               className="text-primary hover:underline px-2 py-1 rounded hover:bg-muted transition-colors"
             >
               Pricing
             </Link>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="text-primary hover:underline px-2 py-1 rounded hover:bg-muted transition-colors"
             >
               Contact
             </Link>
-            <Link 
-              href="/success-stories" 
+            <Link
+              href="/success-stories"
               className="text-primary hover:underline px-2 py-1 rounded hover:bg-muted transition-colors"
             >
               Success Stories
@@ -63,9 +65,10 @@ export default function NotFound() {
         </div>
 
         <div className="mt-8 pt-6 border-t text-xs text-muted-foreground">
-          <p>Need help? Contact us at{' '}
-            <a 
-              href="mailto:support@instamoments.ph" 
+          <p>
+            Need help? Contact us at{' '}
+            <a
+              href="mailto:support@instamoments.ph"
               className="text-primary hover:underline"
             >
               support@instamoments.ph

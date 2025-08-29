@@ -16,7 +16,11 @@ export interface AuthResult<T> {
 // Client-side authentication functions
 export const auth = {
   // Sign up with email and password
-  async signUp(email: string, password: string, profile?: Partial<Profile>): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
+  async signUp(
+    email: string,
+    password: string,
+    profile?: Partial<Profile>
+  ): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
     try {
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -42,25 +46,31 @@ export const auth = {
         }
       }
 
-      return { 
-        data: { 
-          user: data.user!, 
-          profile: null 
-        }, 
-        error: null 
+      return {
+        data: {
+          user: data.user!,
+          profile: null,
+        },
+        error: null,
       };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
 
   // Sign in with email and password
-  async signIn(email: string, password: string): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
+  async signIn(
+    email: string,
+    password: string
+  ): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
@@ -74,19 +84,22 @@ export const auth = {
       // Fetch user profile
       const profile = await this.getProfile(data.user.id);
 
-      return { 
-        data: { 
-          user: data.user, 
-          profile: profile.data 
-        }, 
-        error: null 
+      return {
+        data: {
+          user: data.user,
+          profile: profile.data,
+        },
+        error: null,
       };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -95,47 +108,61 @@ export const auth = {
   async signOut(): Promise<AuthResult<void>> {
     try {
       const { error } = await supabase.auth.signOut();
-      
+
       if (error) {
         return { data: null, error: { message: error.message } };
       }
 
       return { data: undefined, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
 
   // Get current user
-  async getCurrentUser(): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
+  async getCurrentUser(): Promise<
+    AuthResult<{ user: User; profile: Profile | null }>
+  > {
     try {
-      const { data: { user }, error } = await supabase.auth.getUser();
-      
+      const {
+        data: { user },
+        error,
+      } = await supabase.auth.getUser();
+
       if (error || !user) {
-        return { data: null, error: { message: error?.message || 'No user found' } };
+        return {
+          data: null,
+          error: { message: error?.message || 'No user found' },
+        };
       }
 
       // Fetch user profile
       const profile = await this.getProfile(user.id);
 
-      return { 
-        data: { 
-          user, 
-          profile: profile.data 
-        }, 
-        error: null 
+      return {
+        data: {
+          user,
+          profile: profile.data,
+        },
+        error: null,
       };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -155,17 +182,23 @@ export const auth = {
 
       return { data, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
 
   // Create user profile
-  async createProfile(userId: string, profileData: Partial<Profile>): Promise<AuthResult<Profile>> {
+  async createProfile(
+    userId: string,
+    profileData: Partial<Profile>
+  ): Promise<AuthResult<Profile>> {
     try {
       const { data, error } = await supabase
         .from('profiles')
@@ -177,7 +210,7 @@ export const auth = {
             language: 'en-PH',
             timezone: 'Asia/Manila',
             email_notifications: true,
-          }
+          },
         ])
         .select()
         .single();
@@ -188,17 +221,23 @@ export const auth = {
 
       return { data, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
 
   // Update user profile
-  async updateProfile(userId: string, updates: Partial<Profile>): Promise<AuthResult<Profile>> {
+  async updateProfile(
+    userId: string,
+    updates: Partial<Profile>
+  ): Promise<AuthResult<Profile>> {
     try {
       const { data, error } = await supabase
         .from('profiles')
@@ -216,11 +255,14 @@ export const auth = {
 
       return { data, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -238,11 +280,14 @@ export const auth = {
 
       return { data: undefined, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -260,11 +305,14 @@ export const auth = {
 
       return { data: undefined, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -273,31 +321,42 @@ export const auth = {
 // Server-side authentication functions
 export const serverAuth = {
   // Get current user on server side
-  async getCurrentUser(): Promise<AuthResult<{ user: User; profile: Profile | null }>> {
+  async getCurrentUser(): Promise<
+    AuthResult<{ user: User; profile: Profile | null }>
+  > {
     try {
       const supabase = await createClient();
-      const { data: { user }, error } = await supabase.auth.getUser();
-      
+      const {
+        data: { user },
+        error,
+      } = await supabase.auth.getUser();
+
       if (error || !user) {
-        return { data: null, error: { message: error?.message || 'No user found' } };
+        return {
+          data: null,
+          error: { message: error?.message || 'No user found' },
+        };
       }
 
       // Fetch user profile
       const profile = await this.getProfile(user.id);
 
-      return { 
-        data: { 
-          user, 
-          profile: profile.data 
-        }, 
-        error: null 
+      return {
+        data: {
+          user,
+          profile: profile.data,
+        },
+        error: null,
       };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
@@ -318,23 +377,31 @@ export const serverAuth = {
 
       return { data, error: null };
     } catch (error) {
-      return { 
-        data: null, 
-        error: { 
-          message: error instanceof Error ? error.message : 'An unexpected error occurred' 
-        } 
+      return {
+        data: null,
+        error: {
+          message:
+            error instanceof Error
+              ? error.message
+              : 'An unexpected error occurred',
+        },
       };
     }
   },
 };
 
 // Auth state change listener
-export const onAuthStateChange = (callback: (event: string, session: Session | null) => void) => {
+export const onAuthStateChange = (
+  callback: (event: string, session: Session | null) => void
+) => {
   return supabase.auth.onAuthStateChange(callback);
 };
 
 // Get current session
 export const getSession = async () => {
-  const { data: { session }, error } = await supabase.auth.getSession();
+  const {
+    data: { session },
+    error,
+  } = await supabase.auth.getSession();
   return { session, error };
 };

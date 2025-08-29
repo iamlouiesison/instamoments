@@ -62,7 +62,8 @@ function ErrorFallback({ error }: ErrorFallbackProps) {
             Something went wrong
           </h1>
           <p className="text-muted-foreground mb-6">
-            We encountered an unexpected error. Please try again or contact support if the problem persists.
+            We encountered an unexpected error. Please try again or contact
+            support if the problem persists.
           </p>
         </div>
 
@@ -92,9 +93,10 @@ function ErrorFallback({ error }: ErrorFallbackProps) {
         </div>
 
         <div className="mt-6 text-sm text-muted-foreground">
-          <p>Need help? Contact us at{' '}
-            <a 
-              href="mailto:support@instamoments.ph" 
+          <p>
+            Need help? Contact us at{' '}
+            <a
+              href="mailto:support@instamoments.ph"
               className="text-primary hover:underline"
             >
               support@instamoments.ph
