@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, User, LogOut } from 'lucide-react';
+import { getCurrentUserAction, signOutAction } from '@/lib/auth-actions';
 
 interface NavigationItem {
   label: string;
@@ -19,6 +20,25 @@ const navigationItems: NavigationItem[] = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [user, setUser] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const result = await getCurrentUserAction();
+        if (result.success && result.user) {
+          setUser(result.user);
+        }
+      } catch (error) {
+        console.error('Auth check failed:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    checkAuth();
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -28,21 +48,41 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
+  const handleSignOut = async () => {
+    try {
+      const result = await signOutAction();
+      if (result.success) {
+        setUser(null);
+        window.location.href = '/';
+      }
+    } catch (error) {
+      console.error('Sign out failed:', error);
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
+          <Link
+            href="/"
+            className="flex items-center space-x-2"
+            onClick={closeMobileMenu}
+          >
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">IM</span>
+              <span className="text-primary-foreground font-bold text-lg">
+                IM
+              </span>
             </div>
-            <span className="text-xl font-bold text-foreground">InstaMoments</span>
+            <span className="text-xl font-bold text-foreground">
+              InstaMoments
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            {navigationItems.map(item => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -55,12 +95,45 @@ export default function Header() {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Sign In
-            </Button>
-            <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-              Get Started
-            </Button>
+            {!isLoading && (
+              <>
+                {user ? (
+                  <div className="flex items-center space-x-3">
+                    <Link href="/dashboard">
+                      <Button variant="outline" size="sm">
+                        <User className="h-4 w-4 mr-2" />
+                        Dashboard
+                      </Button>
+                    </Link>
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      onClick={handleSignOut}
+                      className="text-muted-foreground hover:text-foreground"
+                    >
+                      <LogOut className="h-4 w-4 mr-2" />
+                      Sign Out
+                    </Button>
+                  </div>
+                ) : (
+                  <>
+                    <Link href="/auth/signin">
+                      <Button variant="outline" size="sm">
+                        Sign In
+                      </Button>
+                    </Link>
+                    <Link href="/auth/signup">
+                      <Button
+                        size="sm"
+                        className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                      >
+                        Get Started
+                      </Button>
+                    </Link>
+                  </>
+                )}
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -69,7 +142,11 @@ export default function Header() {
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -77,7 +154,7 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden border-t bg-background">
             <nav className="py-4 space-y-2">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -88,12 +165,45 @@ export default function Header() {
                 </Link>
               ))}
               <div className="px-4 pt-4 space-y-2 border-t">
-                <Button variant="outline" size="sm" className="w-full">
-                  Sign In
-                </Button>
-                <Button size="sm" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                  Get Started
-                </Button>
+                {!isLoading && (
+                  <>
+                    {user ? (
+                      <>
+                        <Link href="/dashboard" className="w-full">
+                          <Button variant="outline" size="sm" className="w-full">
+                            <User className="h-4 w-4 mr-2" />
+                            Dashboard
+                          </Button>
+                        </Link>
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          onClick={handleSignOut}
+                          className="w-full text-muted-foreground hover:text-foreground"
+                        >
+                          <LogOut className="h-4 w-4 mr-2" />
+                          Sign Out
+                        </Button>
+                      </>
+                    ) : (
+                      <>
+                        <Link href="/auth/signin" className="w-full">
+                          <Button variant="outline" size="sm" className="w-full">
+                            Sign In
+                          </Button>
+                        </Link>
+                        <Link href="/auth/signup" className="w-full">
+                          <Button
+                            size="sm"
+                            className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                          >
+                            Get Started
+                          </Button>
+                        </Link>
+                      </>
+                    )}
+                  </>
+                )}
               </div>
             </nav>
           </div>
