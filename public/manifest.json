@@ -1,26 +1,140 @@
 {
-  "name": "InstaMoments - Event Memory Sharing",
+  "name": "Instagram Moments PH",
   "short_name": "InstaMoments",
-  "description": "Instant collaborative event photo galleries",
+  "description": "Capture every precious moment together with QR code simplicity. No downloads, no signups for guests - just scan and share beautiful event memories instantly.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0ea5e9",
+  "theme_color": "#f59e0b",
   "orientation": "portrait-primary",
-  "categories": ["photography", "social", "events"],
-  "lang": "en-PH",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["photography", "social", "events", "lifestyle"],
   "icons": [
     {
-      "src": "/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
+      "src": "/icons/icon-72x72.svg",
+      "sizes": "72x72",
+      "type": "image/svg+xml",
       "purpose": "maskable any"
     },
     {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "/icons/icon-96x96.svg",
+      "sizes": "96x96",
+      "type": "image/svg+xml",
       "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.svg",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.svg",
+      "sizes": "144x144",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.svg",
+      "sizes": "152x152",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.svg",
+      "sizes": "384x384",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Create Event",
+      "short_name": "New Event",
+      "description": "Create a new event gallery",
+      "url": "/dashboard?action=create",
+      "icons": [
+        {
+          "src": "/icons/shortcut-create-96x96.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "My Events",
+      "short_name": "Events",
+      "description": "View your event galleries",
+      "url": "/dashboard",
+      "icons": [
+        {
+          "src": "/icons/shortcut-events-96x96.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Camera",
+      "short_name": "Camera",
+      "description": "Take photos for an event",
+      "url": "/camera",
+      "icons": [
+        {
+          "src": "/icons/shortcut-camera-96x96.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-landing.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Landing page on desktop"
+    },
+    {
+      "src": "/screenshots/mobile-camera.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Camera interface on mobile"
+    },
+    {
+      "src": "/screenshots/mobile-gallery.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Photo gallery on mobile"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "protocol_handlers": [
+    {
+      "protocol": "web+instamoments",
+      "url": "/event?url=%s"
     }
   ]
 }

@@ -4,6 +4,8 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
+import { PWAInstall } from '@/components/ui/pwa-install';
+import { PWAUpdate } from '@/components/ui/pwa-update';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -65,14 +67,28 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
-        <meta name="theme-color" content="#0ea5e9" />
+        {/* PWA Meta Tags */}
+        <meta name="theme-color" content="#f59e0b" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="InstaMoments" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Instagram Moments" />
         <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="application-name" content="Instagram Moments" />
+        <meta name="msapplication-TileColor" content="#f59e0b" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        
+        {/* PWA Links */}
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/icons/icon-192x192.svg" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.svg" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.svg" />
+        <link rel="icon" type="image/svg+xml" sizes="32x32" href="/icons/icon-72x72.svg" />
+        <link rel="icon" type="image/svg+xml" sizes="16x16" href="/icons/icon-72x72.svg" />
+        
+        {/* Preload critical resources */}
+        <link rel="preload" href="/sw.js" as="script" />
+        <link rel="preload" href="/manifest.json" as="fetch" crossOrigin="anonymous" />
       </head>
       <body className={inter.className}>
         <ErrorBoundary>
@@ -80,6 +96,8 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+            <PWAInstall />
+            <PWAUpdate />
           </div>
         </ErrorBoundary>
       </body>

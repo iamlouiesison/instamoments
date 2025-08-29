@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 import { getCurrentUserAction } from '@/lib/auth-actions';
+import { PWAStatus } from '@/components/ui/pwa-status';
 
 export default async function DashboardPage() {
   // Check if user is authenticated
@@ -42,6 +43,11 @@ export default async function DashboardPage() {
             >
               Manage Profile
             </a>
+          </div>
+          
+          {/* PWA Status Section */}
+          <div className="mt-8">
+            <PWAStatus />
           </div>
         </div>
       </div>
