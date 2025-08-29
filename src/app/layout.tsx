@@ -3,9 +3,12 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { ErrorBoundary } from '@/components/ui/error-boundary';
+
 import { PWAInstall } from '@/components/ui/pwa-install';
 import { PWAUpdate } from '@/components/ui/pwa-update';
+
+
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -91,15 +94,13 @@ export default function RootLayout({
         <link rel="preload" href="/manifest.json" as="fetch" crossOrigin="anonymous" />
       </head>
       <body className={inter.className}>
-        <ErrorBoundary>
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <PWAInstall />
-            <PWAUpdate />
-          </div>
-        </ErrorBoundary>
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <PWAInstall />
+          <PWAUpdate />
+        </div>
       </body>
     </html>
   );
