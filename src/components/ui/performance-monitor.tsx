@@ -5,9 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { Activity, Zap, Clock, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { Activity, Zap, Clock, CheckCircle, XCircle } from 'lucide-react';
 import { useMonitoring, PerformanceMetrics } from '@/lib/monitoring';
-import { getHealthStatus, HealthCheck } from '@/lib/monitoring';
+import { HealthCheck } from '@/lib/monitoring';
 
 interface PerformanceData {
   metrics: Partial<PerformanceMetrics>;
@@ -115,14 +115,15 @@ export function PerformanceMonitor() {
     }
   };
 
-  const getHealthStatusIcon = (status: string) => {
-    switch (status) {
-      case 'healthy': return <CheckCircle className="w-4 h-4" />;
-      case 'degraded': return <AlertTriangle className="w-4 h-4" />;
-      case 'unhealthy': return <XCircle className="w-4 h-4" />;
-      default: return <Activity className="w-4 h-4" />;
-    }
-  };
+  // Health status icon helper (currently unused but kept for future use)
+  // const getHealthStatusIcon = (status: string) => {
+  //   switch (status) {
+  //     case 'healthy': return <CheckCircle className="w-4 h-4" />;
+  //     case 'degraded': return <AlertTriangle className="w-4 h-4" />;
+  //     case 'unhealthy': return <XCircle className="w-4 h-4" />;
+  //     default: return <Activity className="w-4 h-4" />;
+  //   }
+  // };
 
   const performanceScore = getPerformanceScore(performanceData.metrics);
 
@@ -166,7 +167,7 @@ export function PerformanceMonitor() {
         {!isMonitoring ? (
           <div className="text-center py-8 text-muted-foreground">
             <Activity className="w-12 h-12 mx-auto mb-4 opacity-50" />
-            <p>Click "Start Monitoring" to begin tracking performance metrics</p>
+            <p>Click &quot;Start Monitoring&quot; to begin tracking performance metrics</p>
           </div>
         ) : (
           <div className="space-y-6">

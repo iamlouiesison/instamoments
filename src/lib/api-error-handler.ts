@@ -363,7 +363,7 @@ export function validateRequest(
     }
 
     return null; // No error
-  } catch (error) {
+  } catch {
     return createErrorResponse(
       ApiErrorCode.VALIDATION_ERROR,
       'Invalid request body',

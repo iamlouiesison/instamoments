@@ -39,10 +39,11 @@ Sentry.init({
   
   // Integrations
   integrations: [
-    new Sentry.Replay({
-      maskAllText: false,
-      blockAllMedia: false,
-    }),
+    // Note: Replay integration is not available in current Sentry version
+    // new Sentry.Replay({
+    //   maskAllText: false,
+    //   blockAllMedia: false,
+    // }),
   ],
   
   // Debug mode in development

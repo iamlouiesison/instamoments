@@ -1,0 +1,1750 @@
+{
+  "config": {
+    "configFile": "/Users/louiesison/projects/instamomentsph2/instamoments/playwright.config.ts",
+    "rootDir": "/Users/louiesison/projects/instamomentsph2/instamoments/src/__tests__/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "/Users/louiesison/projects/instamomentsph2/instamoments/src/__tests__/e2e/global-setup.ts",
+    "globalTeardown": "/Users/louiesison/projects/instamomentsph2/instamoments/src/__tests__/e2e/global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/louiesison/projects/instamomentsph2/instamoments/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/louiesison/projects/instamomentsph2/instamoments/src/__tests__/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/louiesison/projects/instamomentsph2/instamoments/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/louiesison/projects/instamomentsph2/instamoments/src/__tests__/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/louiesison/projects/instamomentsph2/instamoments/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/louiesison/projects/instamomentsph2/instamoments/src/__tests__/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/louiesison/projects/instamomentsph2/instamoments/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/Users/louiesison/projects/instamomentsph2/instamoments/src/__tests__/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/louiesison/projects/instamomentsph2/instamoments/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/Users/louiesison/projects/instamomentsph2/instamoments/src/__tests__/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 4,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://localhost:3000",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "auth-flow.spec.ts",
+      "file": "auth-flow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication Flow",
+          "file": "auth-flow.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display landing page with sign in and sign up options",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-bc87cfe3a5d369ddee2c",
+              "file": "auth-flow.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign in page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-e16aeb683ebfe601b831",
+              "file": "auth-flow.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign up page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-d2ce3b75f9e2c3a27159",
+              "file": "auth-flow.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign in form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-2255eb6884c5ffed324e",
+              "file": "auth-flow.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign up form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-b4a50f9173539f138d2f",
+              "file": "auth-flow.spec.ts",
+              "line": 62,
+              "column": 7
+            },
+            {
+              "title": "should show validation error for invalid email format",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-4a292381938807f2d41f",
+              "file": "auth-flow.spec.ts",
+              "line": 75,
+              "column": 7
+            },
+            {
+              "title": "should show password strength indicator on sign up",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-c5fa7097594d40d57e9d",
+              "file": "auth-flow.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign in and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-4a7f05b52bb1230bf329",
+              "file": "auth-flow.spec.ts",
+              "line": 106,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign up and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-52b600ed79d7d3ebe282",
+              "file": "auth-flow.spec.ts",
+              "line": 124,
+              "column": 7
+            },
+            {
+              "title": "should show loading states during authentication",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-eace2c96730c7ce0c338",
+              "file": "auth-flow.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "should handle authentication errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-80f284a07aa7b9c060e7",
+              "file": "auth-flow.spec.ts",
+              "line": 159,
+              "column": 7
+            },
+            {
+              "title": "should maintain form data on validation errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-cf157b0506aa233265d4",
+              "file": "auth-flow.spec.ts",
+              "line": 178,
+              "column": 7
+            },
+            {
+              "title": "should provide password reset option",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-fdcffaf6e83da4609463",
+              "file": "auth-flow.spec.ts",
+              "line": 199,
+              "column": 7
+            },
+            {
+              "title": "should handle browser back/forward navigation correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-fbf40434f5e893bee0be",
+              "file": "auth-flow.spec.ts",
+              "line": 216,
+              "column": 7
+            },
+            {
+              "title": "should be accessible with keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-2cc32f017af42414fabc",
+              "file": "auth-flow.spec.ts",
+              "line": 229,
+              "column": 7
+            },
+            {
+              "title": "should work on mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-ee61cdd1110d589a18e2",
+              "file": "auth-flow.spec.ts",
+              "line": 244,
+              "column": 7
+            },
+            {
+              "title": "should display landing page with sign in and sign up options",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-642d5467b8cc7c0e4307",
+              "file": "auth-flow.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign in page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-f258fa9ef9a52ead3329",
+              "file": "auth-flow.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign up page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-d9621bf38353f92fd684",
+              "file": "auth-flow.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign in form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-0142119961d62f0a752b",
+              "file": "auth-flow.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign up form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-165bca478af49edbfed8",
+              "file": "auth-flow.spec.ts",
+              "line": 62,
+              "column": 7
+            },
+            {
+              "title": "should show validation error for invalid email format",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-bb21f38112638507de6c",
+              "file": "auth-flow.spec.ts",
+              "line": 75,
+              "column": 7
+            },
+            {
+              "title": "should show password strength indicator on sign up",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-8d1d82e293e6b92b150b",
+              "file": "auth-flow.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign in and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-0099a761b935b1f83d7b",
+              "file": "auth-flow.spec.ts",
+              "line": 106,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign up and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-c4bbc105d10b1ad59552",
+              "file": "auth-flow.spec.ts",
+              "line": 124,
+              "column": 7
+            },
+            {
+              "title": "should show loading states during authentication",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-f44e448e02110b3e2120",
+              "file": "auth-flow.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "should handle authentication errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-400f72aab3f655a73d10",
+              "file": "auth-flow.spec.ts",
+              "line": 159,
+              "column": 7
+            },
+            {
+              "title": "should maintain form data on validation errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-aff6ba74945af7e93ca0",
+              "file": "auth-flow.spec.ts",
+              "line": 178,
+              "column": 7
+            },
+            {
+              "title": "should provide password reset option",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-86d7e31f2bfbe7587e31",
+              "file": "auth-flow.spec.ts",
+              "line": 199,
+              "column": 7
+            },
+            {
+              "title": "should handle browser back/forward navigation correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-6d132c6fefaf197d4210",
+              "file": "auth-flow.spec.ts",
+              "line": 216,
+              "column": 7
+            },
+            {
+              "title": "should be accessible with keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-5b8180e03e1ec2155f1f",
+              "file": "auth-flow.spec.ts",
+              "line": 229,
+              "column": 7
+            },
+            {
+              "title": "should work on mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-81d032e96857b9073d10",
+              "file": "auth-flow.spec.ts",
+              "line": 244,
+              "column": 7
+            },
+            {
+              "title": "should display landing page with sign in and sign up options",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-084852d8eb4c39bc8a62",
+              "file": "auth-flow.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign in page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-bb045144dee61348187a",
+              "file": "auth-flow.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign up page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-216fc6ad23223dc06f88",
+              "file": "auth-flow.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign in form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-a203ed079ef367f91775",
+              "file": "auth-flow.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign up form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-170cd5e06d6546e286f2",
+              "file": "auth-flow.spec.ts",
+              "line": 62,
+              "column": 7
+            },
+            {
+              "title": "should show validation error for invalid email format",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-f3aeff26933e5df7cc94",
+              "file": "auth-flow.spec.ts",
+              "line": 75,
+              "column": 7
+            },
+            {
+              "title": "should show password strength indicator on sign up",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-a4f6c1325ec586eab6cc",
+              "file": "auth-flow.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign in and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-3be77a1ba26b0e57cb1b",
+              "file": "auth-flow.spec.ts",
+              "line": 106,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign up and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-6674bc1858f2c12ebcab",
+              "file": "auth-flow.spec.ts",
+              "line": 124,
+              "column": 7
+            },
+            {
+              "title": "should show loading states during authentication",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-ec9c8dbf1670a8a9deb1",
+              "file": "auth-flow.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "should handle authentication errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-e4761ad0b01e6604e6f3",
+              "file": "auth-flow.spec.ts",
+              "line": 159,
+              "column": 7
+            },
+            {
+              "title": "should maintain form data on validation errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-eff7c7e9e36d84555c38",
+              "file": "auth-flow.spec.ts",
+              "line": 178,
+              "column": 7
+            },
+            {
+              "title": "should provide password reset option",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-0c52d5c95d8bc0e1cec6",
+              "file": "auth-flow.spec.ts",
+              "line": 199,
+              "column": 7
+            },
+            {
+              "title": "should handle browser back/forward navigation correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-ac981f4be730a7e29a95",
+              "file": "auth-flow.spec.ts",
+              "line": 216,
+              "column": 7
+            },
+            {
+              "title": "should be accessible with keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-7ffdb027382c96c15600",
+              "file": "auth-flow.spec.ts",
+              "line": 229,
+              "column": 7
+            },
+            {
+              "title": "should work on mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-86a4ac6a2dfeda35a86c",
+              "file": "auth-flow.spec.ts",
+              "line": 244,
+              "column": 7
+            },
+            {
+              "title": "should display landing page with sign in and sign up options",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-f29470f9af85b1708250",
+              "file": "auth-flow.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign in page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-26fb1238f39866058c7a",
+              "file": "auth-flow.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign up page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-d56f025a2d83e408a53f",
+              "file": "auth-flow.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign in form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-96cdc19fcd134606c480",
+              "file": "auth-flow.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign up form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-1ce12038d8773215cff0",
+              "file": "auth-flow.spec.ts",
+              "line": 62,
+              "column": 7
+            },
+            {
+              "title": "should show validation error for invalid email format",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-38d531cd02cad9c74a6d",
+              "file": "auth-flow.spec.ts",
+              "line": 75,
+              "column": 7
+            },
+            {
+              "title": "should show password strength indicator on sign up",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-00503e463d40242b8339",
+              "file": "auth-flow.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign in and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-596070e977561e7224ab",
+              "file": "auth-flow.spec.ts",
+              "line": 106,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign up and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-65676936efc776ea455c",
+              "file": "auth-flow.spec.ts",
+              "line": 124,
+              "column": 7
+            },
+            {
+              "title": "should show loading states during authentication",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-3e7dbd10166d1c6cc478",
+              "file": "auth-flow.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "should handle authentication errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-16425bddbcfe4d9bde5e",
+              "file": "auth-flow.spec.ts",
+              "line": 159,
+              "column": 7
+            },
+            {
+              "title": "should maintain form data on validation errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-57a721c7b6754a4b0c9c",
+              "file": "auth-flow.spec.ts",
+              "line": 178,
+              "column": 7
+            },
+            {
+              "title": "should provide password reset option",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-b69a123e6c42ae71681d",
+              "file": "auth-flow.spec.ts",
+              "line": 199,
+              "column": 7
+            },
+            {
+              "title": "should handle browser back/forward navigation correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-aa131d030694fa6ca189",
+              "file": "auth-flow.spec.ts",
+              "line": 216,
+              "column": 7
+            },
+            {
+              "title": "should be accessible with keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-26de2a6963061d3d8bf1",
+              "file": "auth-flow.spec.ts",
+              "line": 229,
+              "column": 7
+            },
+            {
+              "title": "should work on mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-3fa752c411b0f363dd62",
+              "file": "auth-flow.spec.ts",
+              "line": 244,
+              "column": 7
+            },
+            {
+              "title": "should display landing page with sign in and sign up options",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-b50f3ee0dbbf0d325ca6",
+              "file": "auth-flow.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign in page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-cb0fa71d4d2aae4fb61f",
+              "file": "auth-flow.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should navigate to sign up page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-383d03da876c601a7dff",
+              "file": "auth-flow.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign in form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-15f1aacb40152faefaba",
+              "file": "auth-flow.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "should show validation errors for invalid sign up form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-538d43064cb0b7498464",
+              "file": "auth-flow.spec.ts",
+              "line": 62,
+              "column": 7
+            },
+            {
+              "title": "should show validation error for invalid email format",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-23c424b3a9ce729ecd58",
+              "file": "auth-flow.spec.ts",
+              "line": 75,
+              "column": 7
+            },
+            {
+              "title": "should show password strength indicator on sign up",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-90699b00df4020777ed3",
+              "file": "auth-flow.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign in and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-86b0450ac06985a1f1a5",
+              "file": "auth-flow.spec.ts",
+              "line": 106,
+              "column": 7
+            },
+            {
+              "title": "should handle successful sign up and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-7438770cfe8823aa4a8b",
+              "file": "auth-flow.spec.ts",
+              "line": 124,
+              "column": 7
+            },
+            {
+              "title": "should show loading states during authentication",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-ce74bbc68bb8edffee0a",
+              "file": "auth-flow.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "should handle authentication errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-524a8757caaafaebffe9",
+              "file": "auth-flow.spec.ts",
+              "line": 159,
+              "column": 7
+            },
+            {
+              "title": "should maintain form data on validation errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-bb85f55c8a2025393fd1",
+              "file": "auth-flow.spec.ts",
+              "line": 178,
+              "column": 7
+            },
+            {
+              "title": "should provide password reset option",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-770fbaa33bf3450a8755",
+              "file": "auth-flow.spec.ts",
+              "line": 199,
+              "column": 7
+            },
+            {
+              "title": "should handle browser back/forward navigation correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-230539a66458369c1dd8",
+              "file": "auth-flow.spec.ts",
+              "line": 216,
+              "column": 7
+            },
+            {
+              "title": "should be accessible with keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-29bf6dc6d6028fcfcc8b",
+              "file": "auth-flow.spec.ts",
+              "line": 229,
+              "column": 7
+            },
+            {
+              "title": "should work on mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "df6b40174562c70df515-f2e239cece2193847bba",
+              "file": "auth-flow.spec.ts",
+              "line": 244,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-30T07:29:27.085Z",
+    "duration": 43.97000000000003,
+    "expected": 0,
+    "skipped": 80,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -133,7 +133,7 @@ export class MonitoringService {
             this.recordMetric('largestContentfulPaint', entry.startTime);
           }
         });
-        lcpObserver.observe({ entryType: 'largest-contentful-paint' });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       } catch (error) {
         console.warn('Failed to observe LCP:', error);
       }
@@ -144,10 +144,12 @@ export class MonitoringService {
       try {
         const fidObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            this.recordMetric('firstInputDelay', entry.processingStart - entry.startTime);
+            // Note: processingStart is not available in all browsers
+            const processingStart = (entry as any).processingStart || entry.startTime;
+            this.recordMetric('firstInputDelay', processingStart - entry.startTime);
           }
         });
-        fidObserver.observe({ entryType: 'first-input' });
+        fidObserver.observe({ entryTypes: ['first-input'] });
       } catch (error) {
         console.warn('Failed to observe FID:', error);
       }
@@ -166,7 +168,7 @@ export class MonitoringService {
           }
           this.recordMetric('cumulativeLayoutShift', clsValue);
         });
-        clsObserver.observe({ entryType: 'layout-shift' });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
       } catch (error) {
         console.warn('Failed to observe CLS:', error);
       }
@@ -358,7 +360,7 @@ export class MonitoringService {
         return { healthy: false, error: `HTTP ${response.status}` };
       }
     } catch (error) {
-      return { healthy: false, error: error.message };
+      return { healthy: false, error: error instanceof Error ? error.message : "Unknown error" };
     }
   }
 
@@ -376,7 +378,7 @@ export class MonitoringService {
         return { healthy: false, error: `HTTP ${response.status}` };
       }
     } catch (error) {
-      return { healthy: false, error: error.message };
+      return { healthy: false, error: error instanceof Error ? error.message : "Unknown error" };
     }
   }
 
@@ -394,7 +396,7 @@ export class MonitoringService {
         return { healthy: false, error: `HTTP ${response.status}` };
       }
     } catch (error) {
-      return { healthy: false, error: error.message };
+      return { healthy: false, error: error instanceof Error ? error.message : "Unknown error" };
     }
   }
 
@@ -412,7 +414,7 @@ export class MonitoringService {
         return { healthy: false, error: `HTTP ${response.status}` };
       }
     } catch (error) {
-      return { healthy: false, error: error.message };
+      return { healthy: false, error: error instanceof Error ? error.message : "Unknown error" };
     }
   }
 
@@ -425,7 +427,7 @@ export class MonitoringService {
         healthStatus: healthCheck.status,
         responseTime: healthCheck.responseTime.toString(),
       },
-      extra: healthCheck,
+      extra: healthCheck as any,
     });
   }
 

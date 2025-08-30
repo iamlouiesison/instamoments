@@ -1,0 +1,332 @@
+<testsuites id="" name="" tests="80" failures="0" skipped="80" errors="0" time="0.04397000000000003">
+<testsuite name="auth-flow.spec.ts" timestamp="2025-08-30T07:29:27.128Z" hostname="chromium" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testcase name="Authentication Flow › should display landing page with sign in and sign up options" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign in page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign up page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign in form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign up form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation error for invalid email format" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show password strength indicator on sign up" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign in and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign up and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show loading states during authentication" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle authentication errors gracefully" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should maintain form data on validation errors" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should provide password reset option" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle browser back/forward navigation correctly" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should be accessible with keyboard navigation" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should work on mobile viewport" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="auth-flow.spec.ts" timestamp="2025-08-30T07:29:27.128Z" hostname="firefox" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testcase name="Authentication Flow › should display landing page with sign in and sign up options" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign in page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign up page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign in form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign up form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation error for invalid email format" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show password strength indicator on sign up" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign in and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign up and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show loading states during authentication" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle authentication errors gracefully" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should maintain form data on validation errors" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should provide password reset option" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle browser back/forward navigation correctly" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should be accessible with keyboard navigation" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should work on mobile viewport" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="auth-flow.spec.ts" timestamp="2025-08-30T07:29:27.128Z" hostname="webkit" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testcase name="Authentication Flow › should display landing page with sign in and sign up options" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign in page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign up page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign in form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign up form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation error for invalid email format" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show password strength indicator on sign up" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign in and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign up and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show loading states during authentication" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle authentication errors gracefully" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should maintain form data on validation errors" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should provide password reset option" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle browser back/forward navigation correctly" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should be accessible with keyboard navigation" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should work on mobile viewport" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="auth-flow.spec.ts" timestamp="2025-08-30T07:29:27.128Z" hostname="Mobile Chrome" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testcase name="Authentication Flow › should display landing page with sign in and sign up options" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign in page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign up page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign in form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign up form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation error for invalid email format" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show password strength indicator on sign up" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign in and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign up and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show loading states during authentication" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle authentication errors gracefully" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should maintain form data on validation errors" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should provide password reset option" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle browser back/forward navigation correctly" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should be accessible with keyboard navigation" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should work on mobile viewport" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="auth-flow.spec.ts" timestamp="2025-08-30T07:29:27.128Z" hostname="Mobile Safari" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testcase name="Authentication Flow › should display landing page with sign in and sign up options" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign in page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should navigate to sign up page" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign in form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation errors for invalid sign up form" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show validation error for invalid email format" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show password strength indicator on sign up" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign in and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle successful sign up and redirect to dashboard" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should show loading states during authentication" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle authentication errors gracefully" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should maintain form data on validation errors" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should provide password reset option" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should handle browser back/forward navigation correctly" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should be accessible with keyboard navigation" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow › should work on mobile viewport" classname="auth-flow.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

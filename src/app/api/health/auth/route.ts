@@ -1,11 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   const startTime = Date.now();
   
   try {
-    const supabase = createClient();
+    const supabase = await createClient();
     
     // Test auth service by checking session
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Test auth configuration by checking if we can access auth settings
-    const { data: authSettings, error: settingsError } = await supabase.auth.admin.listUsers();
+    const { error: settingsError } = await supabase.auth.admin.listUsers();
 
     // Note: This might fail in production if service role key is not set, which is fine
     const hasAdminAccess = !settingsError;

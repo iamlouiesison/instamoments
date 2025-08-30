@@ -1,11 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   const startTime = Date.now();
   
   try {
-    const supabase = createClient();
+    const supabase = await createClient();
     
     // Test storage bucket access
     const { data: buckets, error: bucketError } = await supabase
@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
     // Check if required buckets exist
     const requiredBuckets = ['avatars', 'photos', 'events'];
     const missingBuckets = requiredBuckets.filter(
-      bucket => !buckets.some(b => b.name === bucket)
+      bucket => !buckets.some((b: any) => b.name === bucket)
     );
 
     if (missingBuckets.length > 0) {
@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
       },
       storage: {
         provider: 'Supabase Storage',
-        buckets: buckets.map(b => b.name),
+        buckets: buckets.map((b: any) => b.name),
         requiredBuckets: requiredBuckets,
         missingBuckets: [],
       },

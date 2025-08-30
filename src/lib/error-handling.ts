@@ -86,7 +86,8 @@ export class ErrorHandler {
   // Analyze error to determine type and severity
   private analyzeError(error: Error | string, context: ErrorContext): void {
     const errorMessage = typeof error === 'string' ? error : error.message;
-    const errorStack = typeof error === 'string' ? undefined : error.stack;
+    // Note: errorStack is currently unused but kept for future analysis
+    // const errorStack = typeof error === 'string' ? undefined : error.stack;
 
     // Determine error type based on message content
     if (errorMessage.includes('validation') || errorMessage.includes('invalid')) {
@@ -253,7 +254,8 @@ export class ErrorHandler {
 
   // Create user-friendly error messages
   getUserFriendlyMessage(error: Error | string, context: ErrorContext): string {
-    const errorMessage = typeof error === 'string' ? error : error.message;
+    // Note: errorMessage is currently unused but kept for future customization
+    // const errorMessage = typeof error === 'string' ? error : error.message;
 
     switch (context.errorType) {
       case ErrorType.VALIDATION:

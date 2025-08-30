@@ -59,7 +59,7 @@ export default function ProfileForm({ initialProfile }: ProfileFormProps) {
     setMessage(null);
 
     startTransition(async () => {
-      const result = await updateProfileAction(profile);
+      const result = await updateProfileAction();
       
       if (result.success) {
         setMessage({ type: 'success', text: result.message! });
@@ -88,7 +88,7 @@ export default function ProfileForm({ initialProfile }: ProfileFormProps) {
       const formData = new FormData();
       formData.append('avatar', file);
 
-      const result = await uploadAvatarAction(formData);
+      const result = await uploadAvatarAction();
       
       if (result.success) {
         setMessage({ type: 'success', text: result.message! });
@@ -105,7 +105,7 @@ export default function ProfileForm({ initialProfile }: ProfileFormProps) {
     setMessage(null);
 
     setIsPasswordPending(async () => {
-      const result = await changePasswordAction(passwordData);
+      const result = await changePasswordAction();
       
       if (result.success) {
         setMessage({ type: 'success', text: result.message! });
